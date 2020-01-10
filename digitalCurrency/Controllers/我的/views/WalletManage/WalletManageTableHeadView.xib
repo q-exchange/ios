@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WalletManageTableHeadView">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="隐藏为0的币种" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CIl-Xy-lYH">
+                    <rect key="frame" x="35" y="360.33333333333331" width="88" height="15.666666666666686"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f6b-kd-PTI">
+                    <rect key="frame" x="15" y="358" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="FQ9-uw-eDm"/>
+                        <constraint firstAttribute="width" constant="20" id="NRS-iR-b0N"/>
+                    </constraints>
+                    <state key="normal" image="walletNoSelect"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o5a-pm-KhY">
+                    <rect key="frame" x="0.0" y="735" width="414" height="1"/>
+                    <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="1" id="8ON-wy-eCA"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aFh-Cv-7WT" customClass="QMUITextField">
+                    <rect key="frame" x="249" y="353" width="150" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="150" id="biE-yy-wC4"/>
+                        <constraint firstAttribute="height" constant="30" id="ycm-Zo-r3m"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="CIl-Xy-lYH" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="F8y-sc-xgy"/>
+                <constraint firstItem="CIl-Xy-lYH" firstAttribute="leading" secondItem="f6b-kd-PTI" secondAttribute="trailing" id="SvA-DO-Oxn"/>
+                <constraint firstItem="o5a-pm-KhY" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="U5G-4v-Own"/>
+                <constraint firstAttribute="trailing" secondItem="o5a-pm-KhY" secondAttribute="trailing" id="cC4-w5-Ftj"/>
+                <constraint firstItem="f6b-kd-PTI" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="f86-mE-2hY"/>
+                <constraint firstAttribute="bottom" secondItem="o5a-pm-KhY" secondAttribute="bottom" id="g6c-2l-Azd"/>
+                <constraint firstItem="f6b-kd-PTI" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="15" id="iWd-PG-pC2"/>
+                <constraint firstAttribute="trailing" secondItem="aFh-Cv-7WT" secondAttribute="trailing" constant="15" id="o7j-fh-YWS"/>
+                <constraint firstItem="aFh-Cv-7WT" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="pGR-Av-ahV"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="line" destination="o5a-pm-KhY" id="O28-Km-Xgh"/>
+                <outlet property="selectBtnLabel" destination="CIl-Xy-lYH" id="tGe-Wa-Mjh"/>
+                <outlet property="selectButton" destination="f6b-kd-PTI" id="Fc8-Eg-Ju2"/>
+                <outlet property="textField" destination="aFh-Cv-7WT" id="hwe-5b-hxJ"/>
+            </connections>
+            <point key="canvasLocation" x="-181.15942028985509" y="-264.94565217391306"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="walletNoSelect" width="14" height="14"/>
+    </resources>
+</document>
